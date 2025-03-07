@@ -1,0 +1,215 @@
+/* Variables de colores */
+:root {
+  --primary-color: #0056b3;
+  --primary-light: #3378c5;
+  --primary-dark: #003d80;
+  --white: #ffffff;
+  --gray-light: #f5f5f5;
+  --gray: #e0e0e0;
+  --text-dark: #333333;
+  --error-color: #dc3545;
+  --transition-speed: 0.3s;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--gray-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  color: var(--text-dark);
+}
+
+/* Contenedor del formulario */
+.form-container {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  transition: transform var(--transition-speed) ease;
+}
+
+.form-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Encabezado del formulario */
+.form-header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 25px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.form-icon {
+  background-color: var(--primary-dark);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px;
+  font-size: 24px;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.form-icon:hover {
+  background-color: var(--primary-light);
+}
+
+.form-header h2 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Estilos del formulario */
+form {
+  padding: 25px 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+input {
+  width: 100%;
+  padding: 12px 35px 12px 45px;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.2);
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 40px;
+  color: var(--primary-color);
+  transition: color var(--transition-speed);
+}
+
+.input-icon:hover {
+  color: var(--primary-dark);
+}
+
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 40px;
+  color: var(--text-dark);
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity var(--transition-speed);
+}
+
+.password-toggle:hover {
+  opacity: 1;
+}
+
+.invalid-feedback {
+  color: var(--error-color);
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) + .invalid-feedback {
+  display: block;
+}
+
+/* Botón de envío */
+button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Efecto pulse en el botón */
+button.pulse:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+button.pulse:active:before {
+  width: 120%;
+  height: 120%;
+  opacity: 1;
+  transition: all 0.6s ease-out;
+}
+
+/* Footer del formulario */
+.form-footer {
+  padding: 15px 30px;
+  text-align: center;
+  background-color: var(--gray-light);
+  border-top: 1px solid var(--gray);
+  font-size: 14px;
+}
+
+.form-footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-speed);
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+  color: var(--primary-dark);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-container {
+      max-width: 100%;
+  }
+  
+  form {
+      padding: 20px;
+  }
+}

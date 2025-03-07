@@ -1,0 +1,275 @@
+
+<div class="dashboard">
+    <!-- Sidebar / Menú lateral -->
+    <div class="sidebar">
+        <div class="logo">Gotitas del Saber</div>
+        <div class="nav-menu">
+            <div class="nav-item active">
+                <i class="icon">📊</i>
+                <span>Dashboard</span>
+            </div>
+            <div class="nav-item">
+                <i class="icon">👨‍👩‍👧‍👦</i>
+                <span>Estudiantes</span>
+            </div>
+            <div class="nav-item">
+                <i class="icon">📝</i>
+                <span>Asignaciones</span>
+            </div>
+            <div class="nav-item">
+                <i class="icon">📈</i>
+                <span>Calificaciones</span>
+            </div>
+            <div class="nav-item">
+                <i class="icon">📆</i>
+                <span>Calendario</span>
+            </div>
+            <div class="nav-item">
+                <i class="icon">⚙️</i>
+                <span>Configuración</span>
+            </div>
+        </div>
+        <div class="user-info">
+            <div class="avatar">JP</div>
+            <div class="user-details">
+                <div class="user-name">Juan Pérez</div>
+                <div class="user-role">Profesor</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <div class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar estudiante...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="header-actions">
+                <div class="notification">🔔</div>
+                <div class="messages">✉️</div>
+            </div>
+        </div>
+
+        <div class="dashboard-title">
+            <h1>Lista de Estudiantes</h1>
+            <div class="actions">
+                <button class="btn btn-primary">+ Añadir Estudiante</button>
+                <button class="btn btn-secondary">Exportar Lista</button>
+            </div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">👨‍👩‍👧‍👦</div>
+                <div class="stat-info">
+                    <div class="stat-value">32</div>
+                    <div class="stat-label">Estudiantes</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-info">
+                    <div class="stat-value">85%</div>
+                    <div class="stat-label">Asistencia</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-info">
+                    <div class="stat-value">7.8</div>
+                    <div class="stat-label">Promedio</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📝</div>
+                <div class="stat-info">
+                    <div class="stat-value">5</div>
+                    <div class="stat-label">Pendientes</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="students-container">
+            <div class="table-controls">
+                <div class="table-filter">
+                    <select>
+                        <option>Todos los estudiantes</option>
+                        <option>Activos</option>
+                        <option>Inactivos</option>
+                    </select>
+                </div>
+                <div class="table-search">
+                    <input type="text" placeholder="Filtrar...">
+                </div>
+            </div>
+            <table class="students-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Promedio</th>
+                        <th>Asistencia</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="student-row">
+                        <td>001</td>
+                        <td>
+                            <div class="student-info">
+                                <div class="student-avatar">AM</div>
+                                <div>Ana María García</div>
+                            </div>
+                        </td>
+                        <td>ana.garciacorreo.com</td>
+                        <td>9.2</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%"></div>
+                            </div>
+                            <span>95%</span>
+                        </td>
+                        <td><span class="badge success">Activo</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-icon">✏️</button>
+                                <button class="btn-icon">👁️</button>
+                                <button class="btn-icon">❌</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="student-row">
+                        <td>002</td>
+                        <td>
+                            <div class="student-info">
+                                <div class="student-avatar">CR</div>
+                                <div>Carlos Rodríguez</div>
+                            </div>
+                        </td>
+                        <td>carlos.rodriguezcorreo.com</td>
+                        <td>7.5</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                            <span>80%</span>
+                        </td>
+                        <td><span class="badge success">Activo</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-icon">✏️</button>
+                                <button class="btn-icon">👁️</button>
+                                <button class="btn-icon">❌</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="student-row">
+                        <td>003</td>
+                        <td>
+                            <div class="student-info">
+                                <div class="student-avatar">LT</div>
+                                <div>Laura Torres</div>
+                            </div>
+                        </td>
+                        <td>laura.torrescorreo.com</td>
+                        <td>8.7</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 88%"></div>
+                            </div>
+                            <span>88%</span>
+                        </td>
+                        <td><span class="badge success">Activo</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-icon">✏️</button>
+                                <button class="btn-icon">👁️</button>
+                                <button class="btn-icon">❌</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="student-row">
+                        <td>004</td>
+                        <td>
+                            <div class="student-info">
+                                <div class="student-avatar">JM</div>
+                                <div>José Martínez</div>
+                            </div>
+                        </td>
+                        <td>jose.martinezcorreo.com</td>
+                        <td>6.3</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress warning" style="width: 65%"></div>
+                            </div>
+                            <span>65%</span>
+                        </td>
+                        <td><span class="badge warning">Advertencia</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-icon">✏️</button>
+                                <button class="btn-icon">👁️</button>
+                                <button class="btn-icon">❌</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="student-row">
+                        <td>005</td>
+                        <td>
+                            <div class="student-info">
+                                <div class="student-avatar">MP</div>
+                                <div>María Pérez</div>
+                            </div>
+                        </td>
+                        <td>maria.perezcorreo.com</td>
+                        <td>4.8</td>
+                        <td>
+                            <div class="progress-bar">
+                                <div class="progress danger" style="width: 55%"></div>
+                            </div>
+                            <span>55%</span>
+                        </td>
+                        <td><span class="badge danger">Riesgo</span></td>
+                        <td>
+                            <div class="action-buttons">
+                                <button class="btn-icon">✏️</button>
+                                <button class="btn-icon">👁️</button>
+                                <button class="btn-icon">❌</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <button class="page-btn">«</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">»</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Aquí iría el JavaScript para interactividad
+    document.addEventListener('DOMContentLoaded', function() {
+        // Animación para las filas de estudiantes
+        const rows = document.querySelectorAll('.student-row');
+        rows.forEach((row, index) => {
+            row.style.animationDelay = `${index * 0.1}s`;
+        });
+        
+        // Función para cambiar entre elementos de navegación
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                navItems.forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
