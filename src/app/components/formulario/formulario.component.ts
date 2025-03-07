@@ -12,7 +12,7 @@ import { LoginService } from '../../services/login.service'; // Importar LoginSe
 })
 export class FormularioComponent {
 
-  email: string = '';
+  email: string = '';  // Se mantiene el estado del email
   password: string = '';  
 
   constructor(private servicio: LoginService, private route: Router) { }
@@ -20,19 +20,27 @@ export class FormularioComponent {
   login(formulario: any) {
     // Asignar el valor del email desde el formulario
     this.email = formulario.value.email;
-
+    console.log('Correo recibido:', this.email); // Verifica si el correo es correcto
+  
     this.servicio.postLogin(formulario.value).subscribe(acceso => {
       let token = acceso.accessToken;
-      if (token != '') {
+      console.log('Token recibido:', token); // Verifica si el token es recibido correctamente
+  
+      if (token !== '') {
         localStorage.setItem("login", "true");
-
-        // Verificar si el correo contiene @profesores.com.ec
-        if (this.email.includes('@profesores.com.ec')) {
-          this.route.navigate(['profesores']);
+  
+        // Usar trim() para asegurarnos de que no haya espacios adicionales en el correo
+        if (this.email.trim().includes('@profesores.com.ec')) {
+          console.log('Redirigiendo a la página de profesores'); // Verifica que la lógica sea correcta
+          this.route.navigate(['profesor']);
         } else {
+          console.log('Redirigiendo a la página de estudiantes'); // Verifica que la lógica sea correcta
           this.route.navigate(['estudiante']);
         }
+      } else {
+        console.error('Token vacío recibido');
       }
+    }, error => {
+      console.error('Error al hacer login:', error);
     });
-  }
-}
+  }  

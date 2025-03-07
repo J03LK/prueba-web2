@@ -29,6 +29,66 @@
       "email": "miguel@gmail.com",
       "password": "123456",
       "id": 11
+    },
+    {
+      "email": "joel@gmail.com",
+      "password": "123456",
+      "id": 12
+    },
+    {
+      "email": "kevin@profesor.ec",
+      "password": "123456",
+      "id": 13
+    },
+    {
+      "email": "joel@profesor.com.ec",
+      "password": "123456",
+      "id": 14
+    },
+    {
+      "email": "joel@profesor.com.ec",
+      "password": "123456",
+      "id": 15
+    },
+    {
+      "email": "miguel@gmail.com",
+      "password": "123456",
+      "id": 16
+    },
+    {
+      "email": "joel@profesor.com.ec",
+      "password": "123456",
+      "id": 17
+    },
+    {
+      "email": "kevin@gmail.com",
+      "password": "123456",
+      "id": 18
+    },
+    {
+      "email": "mateo@profesor.com.ec",
+      "password": "123456",
+      "id": 19
+    },
+    {
+      "email": "joel@gmail.com",
+      "password": "123456",
+      "id": 20
+    },
+    {
+      "email": "sofia@profesores.com.ec",
+      "password": "123456",
+      "id": 21
+    },
+    {
+      "email": "joel@gmail.com",
+      "password": "123456",
+      "id": 22
+    },
+    {
+      "email": "kevinperez44555@profesores.com.ec",
+      "password": "123456",
+      "id": 23
     }
   ]
 }
